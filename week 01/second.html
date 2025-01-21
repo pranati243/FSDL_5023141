@@ -3,112 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic Restaurant Menu</title>
+    <title>Golden Spoon Bistro</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f5f0;
+            background-color: #f4f1e1;
             color: #333;
         }
 
         header {
-            background-color: #8b5e34;
+            background-color: #6b3f2f;
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0;
         }
 
         nav {
-            margin: 20px auto;
-            text-align: center;
+            margin: 20px 0;
         }
 
         nav a {
             text-decoration: none;
-            color: #8b5e34;
-            margin: 0 15px;
+            color: #fff;
+            margin: 0 20px;
             font-size: 1.2em;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            background-color: #8b5e34;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .tabs button {
+            background-color: #8b5e34;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .tabs button:hover {
+            background-color: #6b3f2f;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
         }
 
         .menu-section {
-            margin: 40px auto;
             width: 80%;
-            max-width: 800px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .menu-section h2 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 2em;
-            color: #8b5e34;
+            font-size: 2.5em;
+            color: #6b3f2f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
-            padding: 10px 15px;
-            border-bottom: 1px solid #ddd;
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
 
         .menu-item h3 {
+            font-size: 1.5em;
             margin: 0;
-            font-size: 1.2em;
         }
 
         .menu-item p {
-            margin: 0;
+            margin: 5px 0;
             color: #666;
         }
 
         .menu-item .price {
-            color: #8b5e34;
+            font-size: 1.3em;
             font-weight: bold;
-            font-size: 1.2em;
+            color: #8b5e34;
         }
 
-        footer {
-            background-color: #8b5e34;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 40px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        .registration-form {
-            background-color: #fff8e1;
-            margin: 40px auto;
-            padding: 20px;
+        .feedback-form {
+            background-color: #fff;
+            padding: 30px;
+            margin: 50px auto;
             width: 80%;
-            max-width: 500px;
+            max-width: 600px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
 
-        .registration-form h2 {
+        .feedback-form h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #8b5e34;
+            color: #6b3f2f;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
@@ -121,9 +153,11 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            font-size: 1em;
+            margin-top: 5px;
         }
 
         .form-group input:focus,
@@ -134,20 +168,37 @@
 
         .form-group textarea {
             resize: none;
+            height: 150px;
         }
 
         .form-group button {
             background-color: #8b5e34;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
         }
 
         .form-group button:hover {
-            background-color: #714a27;
+            background-color: #6b3f2f;
         }
+
+        footer {
+            background-color: #6b3f2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
     </style>
 </head>
 <body>
@@ -155,44 +206,134 @@
         <h1>Golden Spoon Bistro</h1>
         <nav>
             <a href="#menu">Menu</a>
-            <a href="#register">Register</a>
+            <a href="#feedback">Feedback</a>
         </nav>
     </header>
 
+    <div class="tabs">
+        <button onclick="openTab(event, 'appetizers')">Appetizers</button>
+        <button onclick="openTab(event, 'mains')">Mains</button>
+        <button onclick="openTab(event, 'beverages')">Beverages</button>
+        <button onclick="openTab(event, 'desserts')">Desserts</button>
+    </div>
+
     <section id="menu" class="menu-section">
         <h2>Our Menu</h2>
-        <div class="menu-item">
-            <div>
-                <h3>Classic Cheeseburger</h3>
-                <p>Served with fries and a drink</p>
+
+        <!-- Appetizers Tab -->
+        <div id="appetizers" class="tab-content active">
+            <h3>Appetizers</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>Spring Rolls</h3>
+                    <p>Delicious crispy spring rolls with a sweet chili dip</p>
+                </div>
+                <div class="price">₹199</div>
             </div>
-            <div class="price">$12.99</div>
+            <div class="menu-item">
+                <div>
+                    <h3>Garlic Bread</h3>
+                    <p>Buttery garlic bread toasted to perfection</p>
+                </div>
+                <div class="price">₹149</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Bruschetta</h3>
+                    <p>Toasted baguette with tomatoes, basil, and balsamic glaze</p>
+                </div>
+                <div class="price">₹249</div>
+            </div>
         </div>
-        <div class="menu-item">
-            <div>
-                <h3>Margherita Pizza</h3>
-                <p>Fresh basil, mozzarella, and tomato</p>
+
+        <!-- Mains Tab -->
+        <div id="mains" class="tab-content">
+            <h3>Mains</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>Classic Cheeseburger</h3>
+                    <p>Served with fries and a cold drink</p>
+                </div>
+                <div class="price">₹799</div>
             </div>
-            <div class="price">$14.99</div>
+            <div class="menu-item">
+                <div>
+                    <h3>Grilled Chicken Sandwich</h3>
+                    <p>Juicy grilled chicken, veggies, and a smoky sauce</p>
+                </div>
+                <div class="price">₹699</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Vegetable Stir Fry</h3>
+                    <p>Seasonal veggies stir-fried in a soy sauce</p>
+                </div>
+                <div class="price">₹599</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Spaghetti Aglio e Olio</h3>
+                    <p>Garlic, chili, and olive oil pasta with parmesan</p>
+                </div>
+                <div class="price">₹749</div>
+            </div>
         </div>
-        <div class="menu-item">
-            <div>
-                <h3>Caesar Salad</h3>
-                <p>With creamy dressing and croutons</p>
+
+        <!-- Beverages Tab -->
+        <div id="beverages" class="tab-content">
+            <h3>Beverages</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>Fresh Lemonade</h3>
+                    <p>Refreshing lemonade with a hint of mint</p>
+                </div>
+                <div class="price">₹149</div>
             </div>
-            <div class="price">$9.99</div>
+            <div class="menu-item">
+                <div>
+                    <h3>Cold Coffee</h3>
+                    <p>Chilled coffee with a touch of vanilla</p>
+                </div>
+                <div class="price">₹199</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Fruit Punch</h3>
+                    <p>Fresh blend of tropical fruits</p>
+                </div>
+                <div class="price">₹179</div>
+            </div>
         </div>
-        <div class="menu-item">
-            <div>
-                <h3>Chocolate Lava Cake</h3>
-                <p>Rich and gooey dessert</p>
+
+        <!-- Desserts Tab -->
+        <div id="desserts" class="tab-content">
+            <h3>Desserts</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Rich and gooey molten chocolate center</p>
+                </div>
+                <div class="price">₹499</div>
             </div>
-            <div class="price">$7.99</div>
+            <div class="menu-item">
+                <div>
+                    <h3>Vanilla Ice Cream</h3>
+                    <p>Classic creamy vanilla ice cream</p>
+                </div>
+                <div class="price">₹249</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Apple Pie</h3>
+                    <p>Warm apple pie with a crispy crust</p>
+                </div>
+                <div class="price">₹349</div>
+            </div>
         </div>
     </section>
 
-    <section id="register" class="registration-form">
-        <h2>Register Now</h2>
+    <section id="feedback" class="feedback-form">
+        <h2>Leave Your Feedback</h2>
         <form>
             <div class="form-group">
                 <label for="name">Full Name:</label>
@@ -204,7 +345,7 @@
             </div>
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Leave a message"></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Leave your feedback"></textarea>
             </div>
             <div class="form-group">
                 <button type="submit">Submit</button>
@@ -215,5 +356,23 @@
     <footer>
         <p>&copy; 2025 Golden Spoon Bistro. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            tablinks = document.getElementsByTagName("button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.style.backgroundColor = "#6b3f2f";
+        }
+    </script>
 </body>
 </html>
