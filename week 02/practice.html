@@ -1,150 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Practice</title>
-  <style>
-    /* Basic Syntax */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-
-    h1, h2 {
-      color: #4CAF50;
-    }
-
-    /* Colors */
-    .color-example {
-      color: #FF5733; /* Text color */
-      background-color: #C8E6C9; /* Background color */
-      padding: 10px;
-      border: 2px solid #4CAF50;
-    }
-
-    /* Fonts */
-    .font-example {
-      font-size: 20px;
-      font-weight: bold;
-      font-style: italic;
-      text-decoration: underline;
-    }
-
-    /* Tables */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    table, th, td {
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px;
-    }
-
-    td {
-      padding: 8px;
-      text-align: left;
-    }
-
-    /* Lists */
-    ul {
-      list-style-type: square;
-    }
-
-    ol {
-      list-style-type: upper-roman;
-    }
-
-    /* CSS3 Features */
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: #2196F3;
-      border-radius: 10px;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    .box:hover {
-      transform: scale(1.2);
-    }
-
-    /* Selectors */
-    #id-selector {
-      color: #673AB7;
-    }
-
-    .class-selector {
-      color: #E91E63;
-    }
-
-    p:first-of-type {
-      font-weight: bold;
-    }
-
-    /* Pseudo-classes */
-    a:hover {
-      color: #FF5722;
-    }
-
-    /* Pseudo-elements */
-    p::first-line {
-      font-size: 1.2em;
-      color: #FF9800;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .hall-ticket {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-left: 10px solid #3202a3; /* Purple border */
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3202a3; /* Purple text */
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .college-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .college-logo img {
+            width: 100px;
+            height: auto;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .student-info, .rules {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .student-info img {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .subject-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .subject-list td, .subject-list th {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+        .subject-list th {
+            background-color: #3202a3; /* Purple header */
+            color: #fff; /* White text */
+        }
+        .rules {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
 </head>
 <body>
-  <h1>CSS Practice</h1>
-  <h2>Syntax and Inclusion</h2>
-  <p>This is a paragraph styled with CSS.</p>
-
-  <h2>Colors</h2>
-  <div class="color-example">This box demonstrates text and background colors.</div>
-
-  <h2>Fonts</h2>
-  <p class="font-example">This text demonstrates various font styles.</p>
-
-  <h2>Tables</h2>
-  <table>
-    <tr>
-      <th>Header 1</th>
-      <th>Header 2</th>
-    </tr>
-    <tr>
-      <td>Data 1</td>
-      <td>Data 2</td>
-    </tr>
-    <tr>
-      <td>Data 3</td>
-      <td>Data 4</td>
-    </tr>
-  </table>
-
-  <h2>Lists</h2>
-  <ul>
-    <li>Unordered list item 1</li>
-    <li>Unordered list item 2</li>
-  </ul>
-  <ol>
-    <li>Ordered list item 1</li>
-    <li>Ordered list item 2</li>
-  </ol>
-
-  <h2>CSS3 Features</h2>
-  <div class="box"></div>
-
-  <h2>Selectors, Pseudo-classes, and Pseudo-elements</h2>
-  <p id="id-selector">This paragraph uses an ID selector.</p>
-  <p class="class-selector">This paragraph uses a class selector.</p>
-  <p>This paragraph demonstrates <a href="#">pseudo-classes</a> and pseudo-elements.</p>
+    <div class="hall-ticket">
+        <div class="header">
+            <h1>Hall Ticket</h1>
+            <p>FCRIT, Vashi</p>
+            <p>B.Tech in Information Technology - Semester IV</p>
+        </div>
+        <div class="college-logo">
+            <img src="https://uploads.sarvgyan.com/2015/08/Fr.-C.-Rodrigues-Institute-of-Technology-Vashi-150x150.jpg" alt="FCRIT Logo">
+        </div>
+        <div class="section student-info">
+            <div>
+                <p>Student Name: DONALD TRUMP</p>
+                <p>Roll Number: 000001</p>
+            </div>
+            <img src="https://th.bing.com/th?id=OSK.HEROJ2j3h-tevTevlHqU-nbph6wvtJbxO9X4usgPmMplz9I&w=312&h=200&c=7&rs=1&o=6&pid=SANGAM" alt="Student Photo">
+        </div>
+        <div class="section subject-list">
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Operating System</td>
+                    <td>29/01/2025</td>
+                    <td>2:30PM - 4:00PM</td>
+                </tr>
+                <tr>
+                    <td>Software Engineering</td>
+                    <td>30/01/2025</td>
+                    <td>2:30PM - 4:00PM</td>
+                </tr>
+                <tr>
+                    <td>Computer Network</td>
+                    <td>31/01/2025</td>
+                    <td>2:30PM - 4:00PM</td>
+                </tr>
+                <tr>
+                    <td>Microcontroller and Embedded Systems</td>
+                    <td>01/02/2025</td>
+                    <td>2:30PM - 4:00PM</td>
+                </tr>
+                <tr>
+                    <td>Engineering Mathematics-IV</td>
+                    <td>02/02/2025</td>
+                    <td>2:30PM - 4:00PM</td>
+                </tr>
+            </table>
+        </div>
+        <div class="section rules">
+            <h3>Rules to Follow:</h3>
+            <p>1. Carry a valid ID card along with the hall ticket.</p>
+            <p>2. Be present at the exam venue 30 minutes before the scheduled time.</p>
+            <p>3. Follow all the instructions given by the invigilators.</p>
+            <p>4. Electronic devices and study materials are strictly prohibited inside the exam hall.</p>
+            <p>5. Ensure the hall ticket is signed by the appropriate authorities.</p>
+        </div>
+    </div>
 </body>
 </html>
