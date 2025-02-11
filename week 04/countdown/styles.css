@@ -1,0 +1,89 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #5c6bc0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input-container {
+  margin: 20px 0;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="datetime-local"] {
+  padding: 12px;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background-color: #f7f7f7;
+}
+
+input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: #5c6bc0;
+  background-color: #e3f2fd;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3f51b5;
+}
+
+button:active {
+  background-color: #2c387e;
+}
+
+.timer-display {
+  font-size: 2rem;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+#timer {
+  transition: all 0.3s ease;
+}

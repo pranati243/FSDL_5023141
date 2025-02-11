@@ -9,8 +9,21 @@
 <body>
   <div class="container">
     <h1>Countdown Timer</h1>
-    <div id="timer"></div>
-    <button onclick="startCountdown()">Start Countdown</button>
+    
+    <!-- Date and Time Input Fields -->
+    <div class="input-container">
+      <label for="eventDateTime">Select Event Date and Time:</label>
+      <input type="datetime-local" id="eventDateTime">
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <button onclick="startCountdown()">Start Countdown</button>
+      <button onclick="resetCountdown()">Reset</button>
+    </div>
+    
+    <!-- Timer Display -->
+    <div id="timer" class="timer-display">00y 00m 00d 00h 00m 00s</div>
   </div>
 
   <script src="countdown.js"></script>

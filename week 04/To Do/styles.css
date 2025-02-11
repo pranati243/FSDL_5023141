@@ -9,16 +9,30 @@ body {
   
   .container {
     text-align: center;
+    padding: 20px;
   }
   
-  #timer {
-    font-size: 2rem;
-    margin: 20px;
+  input, button {
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: gray;
   }
   
   button {
-    padding: 10px 20px;
-    font-size: 1rem;
     cursor: pointer;
     background-color: #5c6bc0;
     color: white;
