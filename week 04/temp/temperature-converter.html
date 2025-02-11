@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temperature Converter</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Temperature Converter</h1>
-    <input type="number" id="tempInput" placeholder="Enter temperature">
-    <select id="unitSelect">
-      <option value="C">Celsius</option>
-      <option value="F">Fahrenheit</option>
-    </select>
-    <button onclick="convertTemperature()">Convert</button>
-    <p id="result"></p>
-  </div>
+    <div class="container">
+        <div class="card">
+            <h1>Temperature Converter</h1>
+            <input type="number" id="inputTemperature" placeholder="Enter temperature" class="temperature-input" oninput="convertTemperature()">
+            
+            <div class="conversion-options">
+                <select id="fromUnit" class="unit-select" onchange="convertTemperature()">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+                <span>to</span>
+                <select id="toUnit" class="unit-select" onchange="convertTemperature()">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
 
-  <script src="temperature-converter.js"></script>
+            <div class="result">
+                <h2>Converted Temperature:</h2>
+                <p id="resultText">0 °C</p>
+            </div>
+
+            <div class="color-bar">
+                <div id="colorBarFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

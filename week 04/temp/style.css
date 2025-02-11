@@ -1,0 +1,93 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Temperature Input Styling */
+.temperature-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Dropdown Selector Styling */
+.unit-select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 10px 10px;
+}
+
+/* Conversion Options Section Styling */
+.conversion-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.conversion-options span {
+    font-size: 1.2rem;
+}
+
+/* Result Styling */
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Color Bar Styling */
+.color-bar {
+    width: 100%;
+    height: 20px;
+    margin-top: 30px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#colorBarFill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+    border-radius: 10px;
+}

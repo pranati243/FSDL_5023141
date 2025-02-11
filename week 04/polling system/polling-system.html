@@ -11,10 +11,30 @@
     <h1>Polling System</h1>
     <p>What's your favorite programming language?</p>
     <form id="pollForm">
-      <label><input type="radio" name="language" value="JavaScript"> JavaScript</label><br>
-      <label><input type="radio" name="language" value="Python"> Python</label><br>
-      <label><input type="radio" name="language" value="Java"> Java</label><br>
-      <label><input type="radio" name="language" value="C++"> C++</label><br>
+      <div class="poll-option">
+        <label>
+          <input type="radio" name="language" value="JavaScript"> JavaScript
+        </label>
+        <span id="jsVotes">0 votes</span>
+      </div>
+      <div class="poll-option">
+        <label>
+          <input type="radio" name="language" value="Python"> Python
+        </label>
+        <span id="pythonVotes">0 votes</span>
+      </div>
+      <div class="poll-option">
+        <label>
+          <input type="radio" name="language" value="Java"> Java
+        </label>
+        <span id="javaVotes">0 votes</span>
+      </div>
+      <div class="poll-option">
+        <label>
+          <input type="radio" name="language" value="C++"> C++
+        </label>
+        <span id="cppVotes">0 votes</span>
+      </div>
       <button type="submit">Vote</button>
     </form>
     <div id="result"></div>

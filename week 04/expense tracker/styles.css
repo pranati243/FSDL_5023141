@@ -1,35 +1,94 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
-  text-align: center;
-  padding: 20px;
-}
-
-input, button {
-  padding: 10px;
-  margin: 5px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-button {
-  cursor: pointer;
-  background-color: #5c6bc0;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #3f51b5;
-}
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #5c6bc0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #3f51b5;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .expense-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .expense-item button {
+    background-color: #f44336;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .expense-item button:hover {
+    background-color: #d32f2f;
+  }
+  
+  #totalExpense {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
