@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Bookstore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: 'Arial', sans-serif;
+    }
+    .navbar {
+      background-color: #3e4a60;
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    .jumbotron {
+      background-color: #28a745;
+      color: white;
+      padding: 60px 0;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .footer {
+      background-color: #3e4a60;
+      color: white;
+      padding: 20px;
+    }
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">BookStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#browse">Browse Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cart">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#profile">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron text-center">
+    <h1>Welcome to Our Bookstore</h1>
+    <p class="lead">Find your favorite books at the best prices.</p>
+  </div>
+
+  <!-- Grid System: Book Display -->
+  <div class="container" id="browse">
+    <h2 class="text-center mb-4">Browse Books</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Book 1">
+          <div class="card-body">
+            <h5 class="card-title">Book 1</h5>
+            <p class="card-text">$15.00</p>
+            <a href="#" class="btn btn-success">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Book 2">
+          <div class="card-body">
+            <h5 class="card-title">Book 2</h5>
+            <p class="card-text">$20.00</p>
+            <a href="#" class="btn btn-success">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Book 3">
+          <div class="card-body">
+            <h5 class="card-title">Book 3</h5>
+            <p class="card-text">$10.00</p>
+            <a href="#" class="btn btn-success">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Book 4">
+          <div class="card-body">
+            <h5 class="card-title">Book 4</h5>
+            <p class="card-text">$12.00</p>
+            <a href="#" class="btn btn-success">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <p>&copy; 2025 BookStore. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
