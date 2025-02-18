@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Add Weather Icons CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Weather App</h1>
+        <div class="input-container">
+            <input type="text" id="city" placeholder="Enter City">
+            <button onclick="getWeather()">Get Weather</button>
+        </div>
+        <div class="weather-info" id="weather-info">
+            <div class="icon-container">
+                <i id="weather-icon" class="wi"></i> <!-- Icon will be inserted here -->
+            </div>
+            <p class="temperature"></p>
+            <p class="description"></p>
+            <p class="humidity"></p>
+            <p class="wind"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
