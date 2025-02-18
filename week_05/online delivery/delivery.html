@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Delivery App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Delivery App</h1>
+        <div class="cart">
+            <span id="cart-count">0</span> items in cart
+        </div>
+    </header>
+
+    <section class="products">
+        <div class="product-card">
+            <img src="pizza.jpg" alt="Pizza" class="product-image">
+            <div class="product-info">
+                <h3>Pizza</h3>
+                <p>$10.00</p>
+                <button class="add-to-cart" data-name="Pizza" data-price="10.00">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="burger.jpg" alt="Burger" class="product-image">
+            <div class="product-info">
+                <h3>Burger</h3>
+                <p>$5.00</p>
+                <button class="add-to-cart" data-name="Burger" data-price="5.00">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="soda.jpg" alt="Soda" class="product-image">
+            <div class="product-info">
+                <h3>Soda</h3>
+                <p>$2.00</p>
+                <button class="add-to-cart" data-name="Soda" data-price="2.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-popup" id="cart-popup">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="total">
+            Total: $<span id="cart-total">0.00</span>
+        </div>
+        <button id="checkout">Checkout</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
