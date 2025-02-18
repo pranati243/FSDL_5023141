@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Carbon Footprint Calculator</h1>
+
+        <!-- User inputs for energy and travel -->
+        <div class="form-container">
+            <label for="energy-consumption">Energy Consumption (kWh/month):</label>
+            <input type="number" id="energy-consumption" placeholder="Enter kWh">
+
+            <label for="travel-distance">Travel Distance (km):</label>
+            <input type="number" id="travel-distance" placeholder="Enter kilometers traveled">
+
+            <button onclick="calculateCarbonFootprint()">Calculate Footprint</button>
+        </div>
+
+        <!-- Display the results -->
+        <div class="results-container" id="results-container">
+            <p><strong>Carbon Footprint:</strong> <span id="carbon-footprint">0</span> kg CO2</p>
+            <div id="feedback-container">
+                <span id="feedback-icon"></span>
+                <span id="feedback"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

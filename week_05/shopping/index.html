@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Online Shopping</h1>
+        <div class="cart" onclick="toggleCartPopup()">
+            🛒 <span id="cart-count">0</span> items | ₹<span id="total-amount">0</span>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <label for="category-filter">Filter by category:</label>
+        <select id="category-filter" onchange="filterProducts()">
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessories">Accessories</option>
+        </select>
+    </div>
+
+    <div class="products">
+        <div class="product" data-category="electronics">
+            <img src="https://cdn.thewirecutter.com/wp-content/media/2024/07/laptopsunder500-2048px-5452.jpg" alt="Laptop">
+            <h3>Laptop</h3>
+            <p>₹40,000</p>
+            <button onclick="addToCart('Laptop', 40000)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="electronics">
+            <img src="https://image-us.samsung.com/us/smartphones/galaxy-s24/all-gallery/01_E1_OnlineExclusive_SapphireBlue_Lockup_1600x1200.jpg?$default-400-jpg$" alt="Phone">
+            <h3>Smartphone</h3>
+            <p>₹25,000</p>
+            <button onclick="addToCart('Smartphone', 25000)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="clothing">
+            <img src="https://pitshirts.in/cdn/shop/files/InShot-20241209_143435268.jpg?v=1733735833&width=1946" alt="T-shirt">
+            <h3>Basic T-shirt</h3>
+            <p>₹500</p>
+            <button onclick="addToCart('Basic T-shirt', 500)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="clothing">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQTmfM2jM6ScGDvb4_c2V_i_AjWdQr4thPMR8D4-l417X50kBBWlcxpXk2fgluQvJNLrbQy9CQ7DZ4pb5oYVOPngN0u2rC86yTA-E-inRVpc3gpc-Inbsmu-Q" alt="Jacket">
+            <h3>Leather Jacket</h3>
+            <p>₹2,500</p>
+            <button onclick="addToCart('Leather Jacket', 2500)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="accessories">
+            <img src="https://assets.ajio.com/medias/sys_master/root/20240509/dWay/663cb79e16fd2c6e6af6824d/-473Wx593H-467124908-black-MODEL.jpg" alt="Watch">
+            <h3>Wrist Watch</h3>
+            <p>₹2,000</p>
+            <button onclick="addToCart('Wrist Watch', 2000)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="accessories">
+            <img src="https://images.meesho.com/images/products/381031467/y6ma2_1200.jpg" alt="Sunglasses">
+            <h3>Stylish Sunglasses</h3>
+            <p>₹1,000</p>
+            <button onclick="addToCart('Stylish Sunglasses', 1000)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Popup -->
+    <div class="cart-popup" id="cart-popup">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="total">
+            Total: ₹<span id="cart-total">0</span>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="toggleCartPopup()">Close</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

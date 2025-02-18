@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 80%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.results-container {
+    margin-top: 20px;
+}
+
+.results-container p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#feedback-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#feedback {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#feedback-icon {
+    font-size: 2rem;
+}
+
+/* Low footprint */
+.low {
+    background-color: #27ae60; /* Green */
+    color: white;
+}
+
+/* Medium footprint */
+.medium {
+    background-color: #f39c12; /* Yellow */
+    color: white;
+}
+
+/* High footprint */
+.high {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
