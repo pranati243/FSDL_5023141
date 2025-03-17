@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp">
+<head>
+    <title>Student Records CRUD App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="StudentController">
+    <h1>📚 Student Records</h1>
+
+    <form name="studentForm" ng-submit="addStudent()">
+        <input type="text" ng-model="newStudent.name" placeholder="Name" required />
+        <input type="number" ng-model="newStudent.age" placeholder="Age" min="5" max="25" required />
+        <input type="text" ng-model="newStudent.grade" placeholder="Grade" required />
+        <button type="submit" ng-disabled="studentForm.$invalid">Add Student</button>
+    </form>
+
+    <h2>📝 Student List</h2>
+    <ul>
+        <li ng-repeat="student in students track by $index">
+            {{ student.name }} - Age: {{ student.age }} - Grade: {{ student.grade }}
+            <button ng-click="editStudent($index)">✏️ Edit</button>
+            <button ng-click="deleteStudent($index)">❌ Delete</button>
+        </li>
+    </ul>
+
+    <script>
+        const app = angular.module("studentApp", []);
+        
+        app.controller("StudentController", function ($scope) {
+            $scope.students = [
+                { name: "John", age: 18, grade: "A" },
+                { name: "Jane", age: 20, grade: "B" }
+            ];
+
+            $scope.addStudent = function () {
+                if ($scope.newStudent) {
+                    $scope.students.push({ ...$scope.newStudent });
+                    $scope.newStudent = {};
+                }
+            };
+
+            $scope.editStudent = function (index) {
+                $scope.newStudent = { ...$scope.students[index] };
+                $scope.deleteStudent(index);
+            };
+
+            $scope.deleteStudent = function (index) {
+                $scope.students.splice(index, 1);
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="validationApp">
+<head>
+    <title>AngularJS Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="FormController">
+    <h1>User Registration</h1>
+
+    <form name="userForm" ng-submit="submitForm()">
+        <label>Name:</label>
+        <input type="text" ng-model="user.name" required />
+        <span ng-show="userForm.$submitted && userForm.name.$error.required">Name is required!</span>
+        <br />
+
+        <label>Email:</label>
+        <input type="email" ng-model="user.email" required />
+        <span ng-show="userForm.$submitted && userForm.email.$error.required">Email is required!</span>
+        <span ng-show="userForm.email.$error.email">Invalid email!</span>
+        <br />
+
+        <label>Age:</label>
+        <input type="number" ng-model="user.age" min="18" max="100" required />
+        <span ng-show="userForm.$submitted && userForm.age.$error.required">Age is required!</span>
+        <span ng-show="userForm.age.$error.min || userForm.age.$error.max">Age must be between 18 and 100!</span>
+        <br />
+
+        <button type="submit">Register</button>
+        <p ng-if="userForm.$valid">✅ Form is valid!</p>
+    </form>
+
+    <script>
+        const app = angular.module("validationApp", []);
+        
+        app.controller("FormController", function ($scope) {
+            $scope.user = {};
+
+            $scope.submitForm = function () {
+                if ($scope.userForm.$valid) {
+                    alert("🎉 Form submitted successfully!");
+                } else {
+                    alert("❌ Please fill the form correctly.");
+                }
+            };
+        });
+    </script>
+</body>
+</html>

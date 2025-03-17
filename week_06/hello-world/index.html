@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helloApp">
+<head>
+    <title>AngularJS Hello World</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="HelloController">
+    <h1>Hello {{name}}!</h1>
+
+    <label>Enter your name: </label>
+    <input type="text" ng-model="name" />
+
+    <h2>Welcome to AngularJS, {{name}}!</h2>
+
+    <script>
+        // Define the AngularJS app
+        const app = angular.module("helloApp", []);
+        
+        // Define the controller
+        app.controller("HelloController", function($scope) {
+            $scope.name = "World";
+        });
+    </script>
+</body>
+</html>
