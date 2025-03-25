@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Circular Image with Box and Confetti</title>
+    <!-- Google Fonts for cursive font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Confetti.js -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8; /* Light background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Stack items vertically */
+        }
+
+        .box {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid #4CAF50; /* Green border around the box */
+            border-radius: 15px; /* Rounded corners for the box */
+            background: linear-gradient(45deg, #ffafbd, #ffc3a0); /* Gradient background */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow around the box */
+            padding: 15px;
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .box:hover {
+            transform: scale(1.05); /* Slightly scale the box on hover */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+        }
+
+        .circle-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Makes the image circular */
+            border: 6px solid #fff; /* White border around the circular image */
+            overflow: hidden; /* Ensures the image fits within the circle */
+        }
+
+        .circle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the circular area without distortion */
+        }
+
+        .cursive-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 32px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-top: 20px; /* Adds space between the image and the text */
+        }
+
+        /* Confetti animation */
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="circle-image">
+            <img src="https://www.freepnglogos.com/uploads/starbucks-logo-png-25.png" alt="Circular Image">
+        </div>
+    </div>
+    <div class="cursive-text">Starbucks</div>
+
+    <div class="confetti" id="confetti"></div>
+
+    <script>
+        // Confetti animation function
+        function launchConfetti() {
+            const confettiSettings = {
+                angle: 90,
+                spread: 90,
+                particleCount: 150,
+                origin: { x: 0.5, y: 0.5 }
+            };
+            confetti(confettiSettings);
+        }
+
+        // Trigger the confetti animation on page load
+        window.onload = function() {
+            launchConfetti();
+        };
+    </script>
+</body>
+</html>
