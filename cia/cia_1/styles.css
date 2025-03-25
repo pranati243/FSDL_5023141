@@ -1,0 +1,25 @@
+body { 
+    font-family: 'Arial', sans-serif; 
+    display: flex; justify-content: center; 
+    align-items: center; height: 100vh;
+     background-color: #f4f4f4; 
+     margin: 0; 
+    }
+     h1 {
+         font-size: 4rem; font-weight: bold; 
+        } 
+        /* Gradient Text Styling */ 
+        .gradient-text { 
+            background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff7eb3, #ff758c); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+            background-size: 200% 200%; 
+            animation: gradient-animation 3s infinite alternate; 
+        } 
+        /* Optional Animation for a moving gradient */
+         @keyframes gradient-animation { 0% { background-position: 0% 50%; } 
+         100% {
+             background-position: 100% 50%; 
+            }
+         }
