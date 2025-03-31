@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Application Example</title>
+  <style>
+    /* Basic styles for the table */
+    table, th, td {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    /* Navigation styling */
+    nav a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to Our HTML5 Application</h1>
+  </header>
+
+  <!-- Navigation with hyperlinks -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section with formatting and images -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>This application demonstrates various HTML5 elements. Here are some examples:</p>
+    <!-- Text Formatting -->
+    <p>
+      <strong>Bold text</strong>, 
+      <em>italic text</em>, 
+      <u>underlined text</u>
+    </p>
+    <!-- Image Example -->
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+  </section>
+
+  <!-- About Section with a table, list, and multimedia -->
+  <section id="about">
+    <h2>About</h2>
+    <p>This section includes a table, an unordered list, and an embedded video.</p>
+    <!-- Table Example -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>Developer</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>Designer</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!-- List Example -->
+    <h3>Key Features:</h3>
+    <ul>
+      <li>Responsive Design</li>
+      <li>Interactive Forms</li>
+      <li>Multimedia Integration</li>
+    </ul>
+    
+    <!-- Multimedia Example (Video) -->
+    <h3>Watch Our Introduction Video:</h3>
+    <video width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Contact Section with a form -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="/submit-form" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- Frames Example using an iframe -->
+  <section>
+    <h2>Embedded Content</h2>
+    <iframe src="https://example.com" title="Embedded Web Page" width="600" height="400">
+      Your browser does not support iframes.
+    </iframe>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 HTML5 Application Example</p>
+  </footer>
+</body>
+</html>
