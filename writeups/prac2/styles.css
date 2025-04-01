@@ -1,0 +1,124 @@
+/* CSS Syntax and Inclusion - External File */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling with Background */
+header {
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Styling */
+nav {
+    text-align: center;
+    margin: 15px 0;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #4CAF50; /* Pseudo-class */
+}
+
+/* Section Styling */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.intro {
+    color: #333;
+    font-size: 18px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Pseudo-class */
+}
+
+/* List Styling */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+.feature-list li {
+    padding: 8px;
+    background: #4CAF50;
+    color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Pseudo-elements */
+h2::before {
+    content: "✨ ";
+    color: #4CAF50;
+}
+h2::after {
+    content: " ✨";
+    color: #4CAF50;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+input, button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input:focus {
+    border-color: #4CAF50; /* Pseudo-class */
+    outline: none;
+}
+button {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background: #2E8B57; /* Pseudo-class */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+}

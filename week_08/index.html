@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="studentApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Records Application</title>
+  <!-- Include AngularJS Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    .error { color: red; }
+    .success { color: green; }
+    form div { margin-bottom: 10px; }
+  </style>
+</head>
+<body ng-controller="StudentController">
+  <h1>Student Records Application</h1>
+  <!-- Student Form -->
+  <form name="studentForm" ng-submit="submitForm(studentForm.$valid)" novalidate>
+    <div>
+      <label>Name:</label>
+      <input type="text" name="name" ng-model="student.name" required />
+      <span class="error" ng-show="studentForm.name.$touched && studentForm.name.$invalid">
+        Name is required.
+      </span>
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email" ng-model="student.email" required />
+      <span class="error" ng-show="studentForm.email.$touched && studentForm.email.$invalid">
+        Enter a valid email.
+      </span>
+    </div>
+    <div>
+      <label>Age:</label>
+      <input type="number" name="age" ng-model="student.age" required min="18" max="65"/>
+      <span class="error" ng-show="studentForm.age.$touched && studentForm.age.$invalid">
+        Age must be between 18 and 65.
+      </span>
+    </div>
+    <div>
+      <button type="submit" ng-disabled="studentForm.$invalid">Add Student</button>
+    </div>
+  </form>
+
+  <!-- List of Added Students -->
+  <h2>Students List</h2>
+  <ul>
+    <li ng-repeat="s in students">
+      {{ s.name }} | {{ s.email }} | {{ s.age }}
+    </li>
+  </ul>
+
+  <!-- AngularJS Application Script -->
+  <script>
+    // Create AngularJS module
+    var app = angular.module('studentApp', []);
+    
+    // Create controller
+    app.controller('StudentController', function($scope) {
+      // Array to hold student records
+      $scope.students = [];
+      // Model for new student data
+      $scope.student = {};
+
+      // Function to submit the form
+      $scope.submitForm = function(isValid) {
+        if (isValid) {
+          // Add the new student record
+          $scope.students.push({
+            name: $scope.student.name,
+            email: $scope.student.email,
+            age: $scope.student.age
+          });
+          // Clear form fields and reset form state
+          $scope.student = {};
+          $scope.studentForm.$setPristine();
+          $scope.studentForm.$setUntouched();
+        } else {
+          alert("Please fill out the form correctly.");
+        }
+      };
+    });
+  </script>
+</body>
+</html>
