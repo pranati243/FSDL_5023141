@@ -3,7 +3,7 @@ function greet(name) {
   }
   
   function processUserInput(callback) {
-    const name = "Bob";
+    const name = "Pranati";
     setTimeout(() => {
       callback(name); // Called after 2 seconds
     }, 2000);

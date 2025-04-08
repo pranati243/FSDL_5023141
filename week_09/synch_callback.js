@@ -3,7 +3,7 @@ function greet(name) {
   }
   
   function processUserInput(callback) {
-    const name = "Alice";
+    const name = "Pranati";
     callback(name); // Call immediately
   }
   
